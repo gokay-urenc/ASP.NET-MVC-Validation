@@ -1,0 +1,35 @@
+﻿@model MVC_29_Validation.Models.Kategori
+@{
+    ViewBag.Title = "Kaydet";
+}
+
+<h2>Kaydet</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(x => x.adi)
+        @Html.TextBoxFor(x => x.adi)
+        @Html.ValidationMessageFor(x => x.adi, "", new { @class = "text text-danger" })
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.aciklamasi)
+        @Html.TextBoxFor(x => x.aciklamasi)
+        @Html.ValidationMessageFor(x => x.aciklamasi, "", new { @class = "text text-danger" })
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.sifre)
+        @Html.TextBoxFor(x => x.sifre)
+        @Html.ValidationMessageFor(x => x.sifre, "", new { @class = "text text-danger" })
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.sifre_tekrari)
+        @Html.TextBoxFor(x => x.sifre_tekrari)
+        @Html.ValidationMessageFor(x => x.sifre_tekrari, "", new { @class = "text text-danger" })
+    </div>
+
+    <input type="submit" value="Ekle" class="btn btn-success" />
+}
